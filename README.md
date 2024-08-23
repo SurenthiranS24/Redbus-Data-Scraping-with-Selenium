@@ -29,3 +29,6 @@ from streamlit_option_menu import option_menu
 import plotly.express as px
 import time
 from PIL import Image
+
+![image](https://github.com/user-attachments/assets/009f9687-c815-4bd7-89f3-706af0e51d19)
+
