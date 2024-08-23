@@ -8,10 +8,10 @@ TRANSPORTATION
 ## SKILL-TAKEAWAY
 Python scripting,Selenium,Data Collection,Data Management using SQL,Streamlit
 ## TECHNOLOGY USED
-Python 3.12.4
-XAMPP
-Streamlit
-Selenium
+*Python 3.12.4\
+*XAMPP\
+*Streamlit\
+*Selenium\
 ## FEATURES OF APPLICATION
 ### Retrive the Bus Information:
   Selenium is a powerful tool for automating web browsers, which is especially useful for web scraping tasks. If you want to retrieve bus details from RedBus, 
