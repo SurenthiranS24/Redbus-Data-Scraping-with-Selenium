@@ -68,34 +68,33 @@ df_West_bengal=pd.read_csv("df_West_bengal.csv")
 for i,r in df_West_bengal.iterrows():
     lists_West_bengal.append(r["Route_name"])
 
-#setting up streamlit page
-st.set_page_config(layout="wide")
+# # Home page setting
+st.set_page_config(page_title="Streamlit Home Page", layout="wide")
 
-web=option_menu(menu_title="🚌OnlineBus",
-                options=["Home","📍States and Routes"],
-                icons=["house","info-circle"],
-                orientation="horizontal"
-                )
-# Home page setting
-if web=="Home":
+# Sidebar with columns
+with st.sidebar:
+    st.title("Navigation")
+    choice = st.radio("Go to", ("🏠Home", "🚌Booking"))
+
+# Main page content based on sidebar selection
+if choice == "🏠Home":
+    st.title("🏠Welcome to the Home Page")
     st.image("C:/Users/Surenthiran/OneDrive/Desktop/Redbus_Project/redbus new.png",width=500)
     st.title("Redbus Data Scraping with Selenium & Streamlit")
     st.subheader(":blue[Domain:]  Transportation")
-    st.subheader(":blue[Ojective:] ")
-    st.markdown("The 'Redbus Data Scraping and Filtering with Streamlit Application' aims to revolutionize the transportation industry by providing a comprehensive solution for collecting, analyzing, and visualizing bus travel data. By utilizing Selenium for web scraping, this project automates the extraction of detailed information from Redbus, including bus routes, schedules, prices, and seat availability. By streamlining data collection and providing powerful tools for data-driven decision-making, this project can significantly improve operational efficiency and strategic planning in the transportation industry.")
-    st.subheader(":blue[Overview:]") 
-    st.markdown("Selenium: Selenium is a tool used for automating web browsers. It is commonly used for web scraping, which involves extracting data from websites. Selenium allows you to simulate human interactions with a web page, such as clicking buttons, filling out forms, and navigating through pages, to collect the desired data...")
-    st.markdown('''Pandas: Use the powerful Pandas library to transform the dataset from CSV format into a structured dataframe.
-                     Pandas helps data manipulation, cleaning, and preprocessing, ensuring that data was ready for analysis.''')
-    st.markdown('''MySQL: With help of SQL to establish a connection to a SQL database, enabling seamless integration of the transformed dataset
-                   and the data was efficiently inserted into relevant tables for storage and retrieval.''')
-    st.markdown("Streamlit: Developed an interactive web application using Streamlit, a user-friendly framework for data visualization and analysis.")
     st.subheader(":blue[Skill-take:]")
-    st.markdown("Selenium, Python, Pandas, MySQL,mysql-connector-python, Streamlit.")
+    st.markdown("Selenium, Python, Pandas, XAMPP,mysql-connector-python, Streamlit.")
     st.subheader(":blue[Developed-by:]  Surenthiran S")
 
-# States and Routes page setting
-if web == "📍States and Routes":
+elif choice == "🚌Booking":
+    st.title("Routes Information")
+    st.write("This section can be used to display information about Bus routes,Bus Type, Bus Timing.")
+
+# Footer or any additional content
+st.markdown("---")
+
+# # States and Routes page setting
+if choice  == "🚌Booking":
     S = st.selectbox("Lists of States", ["Kerala", "Aandhra", "Telungana", "Goa", "Rajastan", 
                                           "South_Bengal", "Haryana", "Assam", "Uttra_pradesh", "West_bengal"])
     
