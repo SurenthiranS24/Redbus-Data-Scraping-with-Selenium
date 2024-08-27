@@ -30,7 +30,10 @@ Redbus Data Scraping with Selenium &amp; Streamlit
 * import time
 * from PIL import Image
 
-![image](https://github.com/user-attachments/assets/35a5a7e9-8532-4589-baf6-457f84887914)
 
-![image](https://github.com/user-attachments/assets/009f9687-c815-4bd7-89f3-706af0e51d19)
+
+![image](https://github.com/user-attachments/assets/7c9d7d05-6972-4f92-bb7a-14018eb853ac)
+![image](https://github.com/user-attachments/assets/8b27988c-b0e1-4e0d-b808-64b270481366)
+
+
 
